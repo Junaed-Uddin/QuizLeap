@@ -2,6 +2,7 @@ import React from 'react';
 import { Checkbox } from "@material-tailwind/react";
 
 const QuizTopic = ({ quizTopic }) => {
+    let count = 0;
     const { id, options, question, correctAnswer } = quizTopic;
 
     return (
@@ -13,7 +14,7 @@ const QuizTopic = ({ quizTopic }) => {
             </div>
             <div className="grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2">
                 {
-                    options.map(option => <div className="duration-300 transform bg-white border-l-4 border-deep-purple-accent-400 className">
+                    options.map(option => <div key={id + `${count++}`} className="duration-300 transform bg-white border-l-4 border-deep-purple-accent-400 className">
                         <div className="p-5 h-full flex items-center border border-l-0 rounded-r shadow-sm">
                             <Checkbox color="blue" />
                             <p>{option}</p>
