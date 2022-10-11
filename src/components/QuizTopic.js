@@ -4,8 +4,7 @@ import { toast } from 'react-toastify';
 
 const QuizTopic = ({ quizTopic, correct, setCorrect, wrong, setWrong }) => {
 
-    let count = 0;
-    const { id, options, question, correctAnswer } = quizTopic;
+    const { options, question, correctAnswer } = quizTopic;
     const rightAnswerHandler = (option) => {
         if (option === correctAnswer) {
             toast.success('Correct Answer.!', { autoClose: 500 });
@@ -31,10 +30,10 @@ const QuizTopic = ({ quizTopic, correct, setCorrect, wrong, setWrong }) => {
             </div>
             <div className="grid gap-5 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2">
                 {
-                    options.map(option => <div key={id + `${count++}`} className=" bg-white hover:bg-slate-100 border-l-4 border-violet-600 rounded-md">
+                    options.map((option, index) => <div key={index} className=" bg-white hover:bg-slate-100 border-l-4 border-violet-600 rounded-md">
                         <div className="p-5 w-full h-full flex items-center border rounded-r shadow-md">
                             <input type="radio" name='myRadio' className='mr-2 mt-1' onClick={() => rightAnswerHandler(option)} color="blue" />
-                            <p className=''>{option}</p>
+                            <p>{option}</p>
                         </div>
                     </div>)
                 }

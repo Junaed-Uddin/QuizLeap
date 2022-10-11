@@ -9,7 +9,7 @@ const Footer = () => {
                     <li>Topics</li>
                     <li>Statistics</li>
                     <li>Questionnaires</li>
-                    <li>About</li>
+                    <li>Contact</li>
                 </ul>
                 <div className="flex flex-col justify-center pt-6 lg:pt-0">
                     <div className="flex justify-center space-x-4">
