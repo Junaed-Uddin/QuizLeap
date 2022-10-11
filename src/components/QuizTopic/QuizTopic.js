@@ -1,17 +1,19 @@
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import { toast } from 'react-toastify';
 
-const QuizTopic = ({ quizTopic }) => {
+const QuizTopic = ({ quizTopic, correct, setCorrect, wrong, setWrong }) => {
+    
     let count = 0;
     const { id, options, question, correctAnswer } = quizTopic;
     const rightAnswerHandler = (option) => {
         if (option === correctAnswer) {
-            toast.success('Correct Answer.!', { autoClose: 500 })
+            toast.success('Correct Answer.!', { autoClose: 500 });
+            setCorrect(() => correct + 1);
         }
         else {
-            toast.error('Wrong Answer.!!', { autoClose: 500 })
+            toast.error('Wrong Answer.!!', { autoClose: 500 });
+            setWrong(() => wrong + 1);
         }
     }
 

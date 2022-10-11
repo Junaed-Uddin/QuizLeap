@@ -28,6 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'statistics',
+                loader:quizData,
                 element: <Statistics></Statistics>
             },
             {
