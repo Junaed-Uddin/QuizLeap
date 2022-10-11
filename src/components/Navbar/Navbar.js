@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = () => {
                         <li>
                             <Link
                                 to="/topics"
-                                className="font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                                className={`font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 ${({ isActive }) => (isActive ? 'active-link' : 'link')}`}
                             >
                                 Topics
                             </Link>
