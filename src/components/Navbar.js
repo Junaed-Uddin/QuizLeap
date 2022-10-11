@@ -37,7 +37,7 @@ const Navbar = () => {
                         <li>
                             <Link
                                 to="/topics"
-                                className="font-medium text-lg tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                                className="font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Topics
                             </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
                         <li>
                             <Link
                                 to="/statistics"
-                                className="font-medium text-lg tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                                className="font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Statistics
                             </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
                         <li>
                             <Link
                                 to="/questionnaires"
-                                className="font-medium text-lg tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                                className="font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Questionnaires
                             </Link>
@@ -141,8 +141,6 @@ const Navbar = () => {
                                             <li>
                                                 <Link
                                                     to="/statistics"
-                                                    aria-label="Our product"
-                                                    title="Our product"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Statistics
@@ -151,8 +149,6 @@ const Navbar = () => {
                                             <li>
                                                 <Link
                                                     to="/questionnaires"
-                                                    aria-label="Product pricing"
-                                                    title="Product pricing"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Questionnaires

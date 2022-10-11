@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Topic = ({ topic }) => {
     const { id, name, logo, total } = topic;
@@ -17,9 +17,9 @@ const Topic = ({ topic }) => {
                     <h2 className="text-xl font-semibold tracking-wide">Topic: <span>{name}</span></h2>
                     <p className="dark:text-gray-100">Questions: {total}</p>
                 </div>
-                <button onClick={quizBtnHandler} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-indigo-400 text-black">
-                    
-                    Start Quiz
+                <button onClick={quizBtnHandler}  type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-indigo-400 text-black">
+                    <span className='mr-2'>Start Quiz</span>
+                    <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                 </button>
             </div>
         </div>
