@@ -6,7 +6,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="bg-gray-900 py-2 sticky top-0 z-20">
+        <div className="bg-gray-900 py-3 sticky top-0 z-20">
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
                     <Link
@@ -30,7 +30,7 @@ const Navbar = () => {
                             <rect x="14" y="1" width="7" height="6" />
                             <rect x="14" y="11" width="7" height="12" />
                         </svg>
-                        <span className="ml-2 text-2xl font-bold tracking-wide text-gray-100 uppercase">
+                        <span className="ml-2 text-3xl font-bold tracking-wide text-gray-100 uppercase">
                             QuizLeap
                         </span>
                     </Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/topics"
-                                className={`font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 ${({ isActive }) => (isActive ? 'bg-violet-600' : undefined)}`}
+                                className={`font-medium text-lg tracking-wide text-gray-100 ${({ isActive }) => (isActive ? 'active' : undefined)}`}
                             >
                                 Topics
                             </NavLink>
@@ -46,7 +46,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/statistics"
-                                className="font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                                className="font-medium text-lg tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Statistics
                             </NavLink>
@@ -54,7 +54,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/questionnaires"
-                                className="font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                                className="font-medium text-lg tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Questionnaires
                             </NavLink>
@@ -62,7 +62,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/contact"
-                                className="font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                                className="font-medium text-lg tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Contact
                             </NavLink>

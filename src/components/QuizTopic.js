@@ -33,10 +33,10 @@ const QuizTopic = ({ quizTopic, correct, setCorrect, wrong, setWrong }) => {
                     options.map((option, index) => <div key={index} className=" bg-white hover:bg-slate-100 border-l-4 border-violet-600 rounded-md">
                         <div className="p-5 w-full h-full flex items-center border rounded-r shadow-md">
                             <input type="radio" name='myRadio' className='mr-2 mt-1' onClick={() => rightAnswerHandler(option)} color="blue" />
-                            <p>{option}</p>
+                            <p className='font-mono'>{option}</p>
                         </div>
                     </div>)
-                }
+                }   
             </div>
         </div>
     );
