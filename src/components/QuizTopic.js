@@ -17,7 +17,7 @@ const QuizTopic = ({ quizTopic, correct, setCorrect, wrong, setWrong }) => {
     }
 
     const correctAnswerHandler = (correctAnswer) => {
-        toast.info(`correctAnswer: ${correctAnswer}`, { autoClose: 1000 });
+        toast.info(`correctAnswer: ${correctAnswer}`, { autoClose: 1600 });
     }
 
     return (

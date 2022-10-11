@@ -13,7 +13,7 @@ const Topics = () => {
             backgroundRepeat: 'no-repeat',
         }}>
             <Header></Header>
-            <div className='grid lg:grid-cols-4 gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 pb-10 sm:mx-14 mx-5'>
+            <div className='grid lg:grid-cols-4 gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 pb-10 sm:mx-14 mx-5' data-aos="zoom-in">
                 {
                     topics.data.map(topic => <Topic
                         key={topic.id}

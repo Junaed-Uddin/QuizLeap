@@ -5,7 +5,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 const Statistics = () => {
     const statistics = useLoaderData().data;
     return (
-        <div className='mt-10 mb-10'>
+        <div className='mt-10 mb-10' data-aos="zoom-in">
                 <h2 className='mb-5 text-2xl font-semibold'>Statistics Data</h2>
             <div className='flex justify-start w-full'>
                 <ResponsiveContainer width={"96%"} height={400}>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <section className="p-6 bg-gray-800 text-white">
+        <section className="p-6 bg-gray-800 text-white" data-aos="zoom-in">
             <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
                 <div className="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-900">
                     <span className="block mb-2 text-lg dark:text-indigo-400">Online Quiz system</span>

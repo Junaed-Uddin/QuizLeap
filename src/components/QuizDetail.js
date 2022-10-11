@@ -29,7 +29,7 @@ const QuizDetails = () => {
                     <p className='py-2 font-bold'>Wrong: {wrong}</p>
                 </div>
             </div>
-            <div className='mt-10 mb-10'>
+            <div className='mt-10 mb-10' data-aos="zoom-in">
                 {
                     quizTopics.data.questions.map(quizTopic => <QuizTopic
                         key={quizTopic.id} correct={correct}
