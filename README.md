@@ -11,5 +11,5 @@
 ### `Technologies:-` 
 - Implement with react-router
 - Dynamically data share with route loader
-- Built with Tailwind
+- Built with Tailwind CSS
 
