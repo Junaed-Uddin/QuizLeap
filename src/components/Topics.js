@@ -7,13 +7,13 @@ import cover from '../assets/cover.jpg';
 const Topics = () => {
     const topics = useLoaderData();
     return (
-        <div className='h-screen' style={{
+        <div style={{
             backgroundImage: `url(${cover})`, backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
         }}>
             <Header></Header>
-            <div className='flex justify-center flex-wrap gap-8 sm:mx-10'>
+            <div className='grid lg:grid-cols-4 gap-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 pb-10 sm:mx-10 mx-5'>
                 {
                     topics.data.map(topic => <Topic
                         key={topic.id}
