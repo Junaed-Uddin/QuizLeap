@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Contact from "../components/Contact";
 import ErrorPage from "../components/ErrorPage";
 import Questionnaire from "../components/Questionnaire";
 import QuizDetail from "../components/QuizDetail";
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
                 path: 'questionnaires',
                 element: <Questionnaire></Questionnaire>
             },
+            {
+                path: 'contact',
+                element:<Contact></Contact>
+            }
         ]
     }
 ])

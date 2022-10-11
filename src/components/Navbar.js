@@ -58,6 +58,14 @@ const Navbar = () => {
                                 Questionnaires
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                to="/contact"
+                                className="font-medium text-md tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                            >
+                                Contact
+                            </Link>
+                        </li>
                     </ul>
                     <div className="lg:hidden">
                         <button
@@ -152,6 +160,14 @@ const Navbar = () => {
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Questionnaires
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    to="/contact"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                >
+                                                    Contact
                                                 </Link>
                                             </li>
                                         </ul>

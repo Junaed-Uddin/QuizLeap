@@ -22,7 +22,7 @@ const QuizDetails = () => {
                     <p className='text-lg mt-2 font-bold'>Wrong: {wrong}</p>
                 </div>
             </div>
-            <div className='mt-10'>
+            <div className='mt-10 mb-10'>
                 {
                     quizTopics.data.questions.map(quizTopic => <QuizTopic
                         key={quizTopic.id} correct={correct}
