@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import ErrorPage from "../components/ErrorPage";
 import Questionnaire from "../components/Questionnaire";
 import QuizDetail from "../components/QuizDetail";
 import Root from "../components/Root";
@@ -10,6 +11,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'statistics',
-                loader:quizData,
+                loader: quizData,
                 element: <Statistics></Statistics>
             },
             {
