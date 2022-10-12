@@ -38,6 +38,7 @@ const QuizDetails = () => {
                         wrong={wrong}
                         setWrong={setWrong}
                         quizTopic={quizTopic}
+                        total={total}
                     ></QuizTopic>)
                 }
             </div>

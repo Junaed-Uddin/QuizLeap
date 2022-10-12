@@ -2,8 +2,9 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 
-const QuizTopic = ({ quizTopic, correct, setCorrect, wrong, setWrong }) => {
+const QuizTopic = ({ quizTopic, total, correct, setCorrect, wrong, setWrong }) => {
     const [disable, setDisable] = useState(false);
     const [check, setCheck] = useState(10);
     const [color, setColor] = useState(false);
@@ -15,6 +16,20 @@ const QuizTopic = ({ quizTopic, correct, setCorrect, wrong, setWrong }) => {
             setCorrect(() => correct + 1);
             setColor(true);
             setDisable(true);
+            if (total === (correct + 1)) {
+                Swal.fire(
+                    'Excellent!',
+                    `You Got ${correct + 1} Marks`,
+                    'success'
+                )
+            }
+            else if (total === (correct + wrong + 1) && (correct + 1) === 7) {
+                Swal.fire(
+                    'Good, Need more practice!',
+                    `You Got ${correct + 1} Marks`,
+                    'success'
+                )
+            }
         }
         else {
             toast.error('Wrong Answer.!!', { autoClose: 500 });
