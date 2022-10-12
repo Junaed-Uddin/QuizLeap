@@ -27,6 +27,7 @@ const QuizDetails = () => {
                 <div className='mx-3 sm:text-end text-xl font-mono'>
                     <p className='font-bold'>Correct: {correct}</p>
                     <p className='py-2 font-bold'>Wrong: {wrong}</p>
+                    <p className='font-bold'>Total Marks: {correct}</p>
                 </div>
             </div>
             <div className='mt-10 mb-10' data-aos="zoom-in">
