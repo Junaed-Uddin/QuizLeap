@@ -1,18 +1,25 @@
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const QuizTopic = ({ quizTopic, correct, setCorrect, wrong, setWrong }) => {
-
+    const [disable, setDisable] = useState(false);
+    const [rightColor, setRightColor] = useState(false);
     const { options, question, correctAnswer } = quizTopic;
+
     const rightAnswerHandler = (option) => {
         if (option === correctAnswer) {
             toast.success('Correct Answer.!', { autoClose: 500 });
             setCorrect(() => correct + 1);
+            setRightColor(true);
+            setDisable(true);
         }
         else {
             toast.error('Wrong Answer.!!', { autoClose: 500 });
             setWrong(() => wrong + 1);
+            setDisable(true);
+
         }
     }
 
@@ -31,12 +38,12 @@ const QuizTopic = ({ quizTopic, correct, setCorrect, wrong, setWrong }) => {
             <div className="grid gap-5 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2">
                 {
                     options.map((option, index) => <div key={index} className=" bg-white hover:bg-slate-100 border-l-4 border-violet-600 rounded-md">
-                        <div className="p-5 w-full h-full flex items-center border rounded-r shadow-md">
-                            <input type="radio" name='myRadio' className='mr-2 mt-1' onClick={() => rightAnswerHandler(option)} color="blue" />
+                        <div className={`p-5 w-full h-full flex items-center border rounded-r shadow-md ${rightColor && option === correctAnswer ? 'bg-green-200' : 'bg-white'}`}>
+                            <input type="checkbox" disabled={disable} name='myCheckbox' className='mr-2 mt-1' onClick={() => rightAnswerHandler(option)} color="blue" />
                             <p className='font-mono'>{option}</p>
                         </div>
                     </div>)
-                }   
+                }
             </div>
         </div>
     );
